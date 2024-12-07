@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrono+</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"
+    defer></script>
+  <script src="js/script.js" defer></script>
+  <link rel="shortcut icon" href="img/img-assets/favicon.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body style="background-color: #f2ede4">
+  <!--Navbar principal-->
+  <nav id="navbar" class="navbar fixed-top navbar-expand-lg shadow-sm">
+    <div class="container-fluid">
+      <a id="logo" class="px-4 link-opacity-50-hover nav-link link-light navbar-brand" href="index.html">CHRONO+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="link-opacity-50-hover nav-link active link-light fw-bold fs-5" aria-current="page"
+              href="html/catálogo.html">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="link-opacity-50-hover nav-link active link-light fw-bold fs-5" aria-current="page" href="#">Minha
+              lista</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="link-opacity-50-hover nav-link link-light fw-bold fs-5 dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Perfil
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="link-opacity-50-hover nav-link link-dark fw-bold fs-5 dropdown-item" href="html/login.html">Entrar</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <button id="btn-lupa" class="btn d-lg-flex" type="button">
+            <i class="bi bi-search"></i>
+          </button>
+          <input id="input-pesquisa" class="form-control me-2 d-lg-block w-100" type="search"
+            placeholder="Busque filmes ou séries" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar lateral Principal -->
+  <nav id="sidebar" class="collapse d-lg-block sidebar sidebar-collapsed">
+    <div class="position-sticky m-4 ps-2">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item pb-4">
+          <a class="link-opacity-50-hover nav-link active link-light fw-bold fs-4" aria-current="page"
+            href="#Destaques">
+            <i class="bi bi-star-fill"></i>
+            <span class="menu-text">Destaques</span>
+          </a>
+        </li>
+        <li class="nav-item pb-4">
+          <a class="link-opacity-50-hover nav-link active link-light fw-bold fs-4" aria-current="page"
+            href="#Novidades">
+            <i class="bi bi-bell-fill"></i>
+            <span class="menu-text">Novidades</span>
+          </a>
+        </li>
+        <li class="nav-item pb-4">
+          <a href="#submenu1" data-bs-toggle="collapse"
+            class="link-opacity-50-hover nav-link active link-light fw-bold fs-4">
+            <i class="bi bi-film"></i>
+            <span class="menu-text">Gêneros</span>
+          </a>
+          <ul class="collapse flex-column ms-1 menu-text" id="submenu1">
+            <li class="menu-text w-100">
+              <a href="#Ação" class="nav-link active link-opacity-50-hover link-light fw-bold fs-5">
+                <span>Ação</span>
+              </a>
+            </li>
+            <li class="menu-text w-100">
+              <a href="#Comédia" class="nav-link active link-opacity-50-hover link-light fw-bold fs-5">
+                <span>Comédia</span>
+              </a>
+            </li>
+            <li class="menu-text w-100">
+              <a href="#Terror" class="nav-link active link-opacity-50-hover link-light fw-bold fs-5">
+                <span>Terror</span>
+              </a>
+            </li>
+            <li class="menu-text w-100">
+              <a href="#Drama" class="nav-link active link-opacity-50-hover link-light fw-bold fs-5">
+                <span>Drama</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Navbar lateral Secundária -->
+  <nav id="sidebar-esquerda" class="collapse d-lg-block sidebar-esquerda"></nav>
+
+  <!--Seção principal-->
+  <main>
+    <!--Banner da seção principal-->
+    <div id="banner-main" class="position-relative overflow-hidden p-md-3 m-md-2 text-center" style="color: #403F4D;">
+      <div class="col-md-6 p-lg-1 mx-auto my-4">
+        <h1 class="display-3 fw-bold">Descubra novos mundos com Chrono+</h1>
+        <h3 class="fw-normal text-muted mb-3">O melhor do cinema e das séries, ao seu alcance.</h3>
+      </div>
+      <div class="product-device shadow-sm d-none d-md-block"></div>
+      <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+
+    <!--Seções-->
+    <div class="container my-5">
+      <!--Destaques-->
+      <div id="Destaques" class="container my-5">
+        <h1 class="fw-bold" style="color: #403F4D;">Destaques</h1>
+        <div class="slider-container position-relative">
+          <div class="slider-track">
+            <!-- Narradores de Javé -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/narradoresdejave.jpg" alt="Narradores de Javé">
+              <div class="card-overlay">
+                <h5 class="card-title">Narradores de Javé</h5>
+                <p class="card-description">Histórias que mantêm viva a memória de um povo.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+
+            <!-- Nosferatu -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/nosferatu.jpg" alt="Nosferatu">
+              <div class="card-overlay">
+                <h5 class="card-title">Nosferatu</h5>
+                <p class="card-description">Um vampiro misterioso, trazendo medo e desespero.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+
+            <!-- O Garoto -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/garoto.jpg" alt="O Garoto">
+              <div class="card-overlay">
+                <h5 class="card-title">O Garoto</h5>
+                <p class="card-description">Um vagabundo cria um bebê abandonado, e agora a mãe o quer de volta.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+
+            <!-- Madame Butterfly -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/madame.jpg" alt="Madame Butterfly">
+              <div class="card-overlay">
+                <h5 class="card-title">Madame Butterfly</h5>
+                <p class="card-description">Um tenente americano abandona uma jovem japonesa que ainda o espera anos
+                  depois.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+
+            <!-- Metrópolis -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/metropolis.jpg" alt="Metrópolis">
+              <div class="card-overlay">
+                <h5 class="card-title">Metrópolis</h5>
+                <p class="card-description">Luta de classes em uma cidade futurista.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+
+            <!-- Noite dos Mortos Vivos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/noitedosmortosvivos.jpg" alt="Noite dos Mortos Vivos">
+              <div class="card-overlay">
+                <h5 class="card-title">A noite dos mortos vivos</h5>
+                <p class="card-description">Sobreviventes enfrentam zumbis e a tensão humana em uma fazenda isolada.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Novidades-->
+      <div id="Novidades" class="container my-5">
+        <h1 class="fw-bold" style="color: #403F4D;">Novidades</h1>
+        <div class="slider-container position-relative">
+          <div class="slider-track">
+            <!-- Alice -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/alice.jpg" alt="Alice no País das Maravilhas">
+              <div class="card-overlay">
+                <h5 class="card-title">Alice no País das Maravilhas</h5>
+                <p class="card-description">A história de uma menina que após cair no sono, sonha que está em uma terra
+                  de maravilhas.
+                </p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!--O Grande Ditador-->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/ditador.jpg" alt="O Grande Ditador">
+              <div class="card-overlay">
+                <h5 class="card-title">O Grande Ditador</h5>
+                <p class="card-description">Um barbeiro judeu se vê confundido com o ditador fascista Adenoid Hynkel,
+                  uma paródia de Hitler.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- A paixão de Joana -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/joana.jpg" alt="A Paixão de Joana d’Arc ">
+              <div class="card-overlay">
+                <h5 class="card-title">A Paixão de Joana d’Arc </h5>
+                <p class="card-description">Uma jovem camponesa é condenada à morte por ter liderado o povo francês
+                  contra o exército invasor inglês, alegando inspiração divina.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Luzes da Cidade -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/luzesdacidade.jpg" alt="Luzes da Cidade">
+              <div class="card-overlay">
+                <h5 class="card-title">Luzes da Cidade</h5>
+                <p class="card-description">Um homem pobre tenta ajudar uma florista cega a recuperar a visão,
+                  disfarçando-se de rico, enquanto enfrenta dificuldades para conquistar seu amor.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Vaqueiro -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/vaqueiro.jpg" alt="Vaqueiro Avacalhado">
+              <div class="card-overlay">
+                <h5 class="card-title">Vaqueiro Avacalhado</h5>
+                <p class="card-description">Sem Amigos está viajando para o Oeste quando de repente cai do trem no meio
+                  do deserto, onde ele consegue um trabalho em uma fazenda.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Tempos modernos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/temposmodernos.jpg" alt="Tempos Modernos">
+              <div class="card-overlay">
+                <h5 class="card-title">Tempos Modernos</h5>
+                <p class="card-description">Um operário luta contra a mecanização e a pobreza, enquanto tenta ajudar uma
+                  jovem desempregada.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Branca de Neve -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/brancadeneve.jpg" alt="Branca de Neve">
+              <div class="card-overlay">
+                <h5 class="card-title">Branca de Neve</h5>
+                <p class="card-description">Uma rainha má com muita inveja e vaidade da beleza de sua enteada, a Branca
+                  de Neve, manda um carrasco para matar ela. </p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Casamento de Carlitos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/casamentocarlito.jpg" alt="Casamento de Carlitos">
+              <div class="card-overlay">
+                <h5 class="card-title">O Casamento de Carlitos</h5>
+                <p class="card-description">Carlitos tenta conquistar o coração de uma jovem, enfrentando diversos
+                  obstáculos e confusões durante o processo.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Charlie-->
+      <div id="Charlie" class="container my-5">
+        <h1 class="fw-bold" style="color: #403F4D;">Coleção de filmes: Charlie Chaplin</h1>
+        <div class="slider-container position-relative">
+          <div class="slider-track">
+            <!--O Grande Ditador-->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/ditador.jpg" alt="O Grande Ditador">
+              <div class="card-overlay">
+                <h5 class="card-title">O Grande Ditador</h5>
+                <p class="card-description">Um barbeiro judeu se vê confundido com o ditador fascista Adenoid Hynkel,
+                  uma paródia de Hitler.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- O Garoto -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/garoto.jpg" alt="O Garoto">
+              <div class="card-overlay">
+                <h5 class="card-title">O Garoto</h5>
+                <p class="card-description">Um vagabundo cria um bebê abandonado, e agora a mãe o quer de volta.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Luzes da Cidade -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/luzesdacidade.jpg" alt="Luzes da Cidade">
+              <div class="card-overlay">
+                <h5 class="card-title">Luzes da Cidade</h5>
+                <p class="card-description">Um homem pobre tenta ajudar uma florista cega a recuperar a visão,
+                  disfarçando-se de rico, enquanto enfrenta dificuldades para conquistar seu amor.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Tempos modernos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/temposmodernos.jpg" alt="Tempos Modernos">
+              <div class="card-overlay">
+                <h5 class="card-title">Tempos Modernos</h5>
+                <p class="card-description">Um operário luta contra a mecanização e a pobreza, enquanto tenta ajudar uma
+                  jovem desempregada.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Casamento de Carlitos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/casamentocarlito.jpg" alt="Casamento de Carlitos">
+              <div class="card-overlay">
+                <h5 class="card-title">O Casamento de Carlitos</h5>
+                <p class="card-description">Carlitos tenta conquistar o coração de uma jovem, enfrentando diversos
+                  obstáculos e confusões durante o processo.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Em busca do ouro -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/goldrush.jpg" alt="Em Busca do Ouro">
+              <div class="card-overlay">
+                <h5 class="card-title">Em Busca do Ouro</h5>
+                <p class="card-description">Carlitos busca ouro no Alasca, enfrentando dificuldades e situações cômicas,
+                  enquanto tenta sobreviver e encontrar a riqueza.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Comédia-->
+      <div id="Comédia" class="container my-5">
+        <h1 class="fw-bold" style="color: #403F4D;">Categoria: Comédia</h1>
+        <div class="slider-container position-relative">
+          <div class="slider-track">
+            <!-- Vaqueiro -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/vaqueiro.jpg" alt="Vaqueiro Avacalhado">
+              <div class="card-overlay">
+                <h5 class="card-title">Vaqueiro Avacalhado</h5>
+                <p class="card-description">Sem Amigos está viajando para o Oeste quando de repente cai do trem no meio
+                  do deserto, onde ele consegue um trabalho em uma fazenda.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!--O Grande Ditador-->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/ditador.jpg" alt="O Grande Ditador">
+              <div class="card-overlay">
+                <h5 class="card-title">O Grande Ditador</h5>
+                <p class="card-description">Um barbeiro judeu se vê confundido com o ditador fascista Adenoid Hynkel,
+                  uma paródia de Hitler.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- O Garoto -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/garoto.jpg" alt="O Garoto">
+              <div class="card-overlay">
+                <h5 class="card-title">O Garoto</h5>
+                <p class="card-description">Um vagabundo cria um bebê abandonado, e agora a mãe o quer de volta.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Luzes da Cidade -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/luzesdacidade.jpg" alt="Luzes da Cidade">
+              <div class="card-overlay">
+                <h5 class="card-title">Luzes da Cidade</h5>
+                <p class="card-description">Um homem pobre tenta ajudar uma florista cega a recuperar a visão,
+                  disfarçando-se de rico, enquanto enfrenta dificuldades para conquistar seu amor.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Tempos modernos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/temposmodernos.jpg" alt="Tempos Modernos">
+              <div class="card-overlay">
+                <h5 class="card-title">Tempos Modernos</h5>
+                <p class="card-description">Um operário luta contra a mecanização e a pobreza, enquanto tenta ajudar uma
+                  jovem desempregada.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Casamento de Carlitos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/casamentocarlito.jpg" alt="Casamento de Carlitos">
+              <div class="card-overlay">
+                <h5 class="card-title">O Casamento de Carlitos</h5>
+                <p class="card-description">Carlitos tenta conquistar o coração de uma jovem, enfrentando diversos
+                  obstáculos e confusões durante o processo.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Em busca do ouro -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/goldrush.jpg" alt="Em Busca do Ouro">
+              <div class="card-overlay">
+                <h5 class="card-title">Em Busca do Ouro</h5>
+                <p class="card-description">Carlitos busca ouro no Alasca, enfrentando dificuldades e situações cômicas,
+                  enquanto tenta sobreviver e encontrar a riqueza.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Drama-->
+      <div id="Drama" class="container my-5">
+        <h1 class="fw-bold" style="color: #403F4D;">Categoria: Drama</h1>
+        <div class="slider-container position-relative">
+          <div class="slider-track">
+            <!-- A paixão de Joana -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/joana.jpg" alt="A Paixão de Joana d’Arc ">
+              <div class="card-overlay">
+                <h5 class="card-title">A Paixão de Joana d’Arc </h5>
+                <p class="card-description">Uma jovem camponesa é condenada à morte por ter liderado o povo francês
+                  contra o exército invasor inglês, alegando inspiração divina.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Branca de Neve -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/brancadeneve.jpg" alt="Branca de Neve">
+              <div class="card-overlay">
+                <h5 class="card-title">Branca de Neve</h5>
+                <p class="card-description">Uma rainha má com muita inveja e vaidade da beleza de sua enteada, a Branca
+                  de Neve, manda um carrasco para matar ela. </p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Vaqueiro -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/vaqueiro.jpg" alt="Vaqueiro Avacalhado">
+              <div class="card-overlay">
+                <h5 class="card-title">Vaqueiro Avacalhado</h5>
+                <p class="card-description">Sem Amigos está viajando para o Oeste quando de repente cai do trem no meio
+                  do deserto, onde ele consegue um trabalho em uma fazenda.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Tempos modernos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/temposmodernos.jpg" alt="Tempos Modernos">
+              <div class="card-overlay">
+                <h5 class="card-title">Tempos Modernos</h5>
+                <p class="card-description">Um operário luta contra a mecanização e a pobreza, enquanto tenta ajudar uma
+                  jovem desempregada.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Noite dos Mortos Vivos -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/noitedosmortosvivos.jpg" alt="Noite dos Mortos Vivos">
+              <div class="card-overlay">
+                <h5 class="card-title">A noite dos mortos vivos</h5>
+                <p class="card-description">Sobreviventes enfrentam zumbis e a tensão humana em uma fazenda isolada.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Madame Butterfly -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/madame.jpg" alt="Madame Butterfly">
+              <div class="card-overlay">
+                <h5 class="card-title">Madame Butterfly</h5>
+                <p class="card-description">Um tenente americano abandona uma jovem japonesa que ainda o espera anos
+                  depois.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Narradores de Javé -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/narradoresdejave.jpg" alt="Narradores de Javé">
+              <div class="card-overlay">
+                <h5 class="card-title">Narradores de Javé</h5>
+                <p class="card-description">Histórias que mantêm viva a memória de um povo.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- O Garoto -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/garoto.jpg" alt="O Garoto">
+              <div class="card-overlay">
+                <h5 class="card-title">O Garoto</h5>
+                <p class="card-description">Um vagabundo cria um bebê abandonado, e agora a mãe o quer de volta.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+            <!-- Em busca do ouro -->
+            <div class="card col-6 col-md-4 col-lg-3 col-xl-2">
+              <img src="img/img-media/img-card/goldrush.jpg" alt="Em Busca do Ouro">
+              <div class="card-overlay">
+                <h5 class="card-title">Em Busca do Ouro</h5>
+                <p class="card-description">Carlitos busca ouro no Alasca, enfrentando dificuldades e situações cômicas,
+                  enquanto tenta sobreviver e encontrar a riqueza.</p>
+                <a id="btn-assistir" class="btn btn-primary fw-bold" href="#" role="button">Assista</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Rodapé-->
+  <footer class="bg-dark text-white py-3 mt-auto">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-3 text-center mb-2 mb-md-0 nav-item">
+          <a href="#" class="link-opacity-50-hover nav-link active link-light fw-bold fs-5">Sobre nós</a>
+        </div>
+        <div class="col-12 col-md-3 text-center mb-2 mb-md-0 nav-item">
+          <a href="html/feedback.html" class="link-opacity-50-hover nav-link active link-light fw-bold fs-5">Feedback</a>
+        </div>
+        <div class="col-12 col-md-3 text-center mb-2 mb-md-0 nav-item">
+          <a href="#" class="link-opacity-50-hover nav-link active link-light fw-bold fs-5">Créditos</a>
+        </div>
+      </div>
+      <hr class="my-3" style="border-color: white;">
+      <div class="text-center">
+        <h1 id="logo" class="px-4 navbar-brand" href="index.html">CHRONO+</h1>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
