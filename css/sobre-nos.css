@@ -1,0 +1,93 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+  padding-top: 3rem;
+}
+
+#navbar{
+    background-color: #403F4D;
+
+}
+#logo{
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+#input-pesquisa{
+    border-radius: 25px;
+}
+#btn-lupa {
+    transition: background-color 0.3s ease;
+  }
+  
+  #btn-lupa:hover {
+    background-color: #f0f0f0;
+  }
+#btn-lupa {
+    transition: background-color 0.3s ease;
+    font-size: 1.25rem; color: white;
+  }
+  
+  #btn-lupa:hover {
+    background-color: #f0f0f0;
+    color: gray;
+  }
+  #input-pesquisa {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  #input-pesquisa.show {
+    width: 250px;
+    opacity: 1;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    z-index: 600;
+    background-color: #403F4D;
+    overflow-x: hidden;
+  }
+ 
+.sidebar-esquerda {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  z-index: 600;
+  background-color: #403F4D;
+}
+
+main{
+  flex: 1;
+}
+footer {
+  position: relative;
+  z-index: 700;
+  border-top: 2px solid white;
+}
+.hero {
+    background: url('../img/img-assets/banner-sobre.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+  }
+  .section-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .content-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  .content-section {
+    margin-bottom: 30px;
+  }

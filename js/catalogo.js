@@ -34,3 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  function selectFilter(category, element) {
+
+    filterCards(category);
+
+    const items = document.querySelectorAll("#dropdownFilters .dropdown-item");
+    items.forEach((item) => item.classList.remove("active"));
+
+    element.classList.add("active");
+  }

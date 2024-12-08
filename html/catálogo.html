@@ -61,11 +61,11 @@
   </nav>
 
   <!-- Navbar lateral Principal -->
-  <nav id="sidebar" class="collapse d-md-block sidebar sidebar-collapsed">
+  <nav id="sidebar" class="collapse d-xl-block sidebar sidebar-collapsed">
   </nav>
 
   <!-- Navbar lateral Secundária -->
-  <nav id="sidebar-esquerda" class="collapse d-lg-block sidebar-esquerda"></nav>
+  <nav id="sidebar-esquerda" class="collapse d-xl-block sidebar-esquerda"></nav>
 
   <div class="d-flex-wrapper">
     <main>
@@ -77,44 +77,67 @@
             onkeyup="searchCards()">
         </div>
 
-        <!-- Filtros da pesquisa -->
         <div class="row d-flex justify-content-between align-items-center mb-4">
-          <div class="row g-2">
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('all')">Todos</button>
+            <!-- Dropdown for Small Screens -->
+            <div class="d-md-none col-12">
+              <div class="dropdown">
+                <button class="btn btn-outline-dark dropdown-toggle w-100" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  Filtros
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="filterDropdown" id="dropdownFilters">
+                  <li><button class="dropdown-item" onclick="selectFilter('all', this)">Todos</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Ação', this)">Ação</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Terror', this)">Terror</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Comédia', this)">Comédia</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Drama', this)">Drama</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Aventura', this)">Aventura</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Infantil', this)">Infantil</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Fantasia', this)">Fantasia</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Animação', this)">Animação</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Romance', this)">Romance</button></li>
+                  <li><button class="dropdown-item" onclick="selectFilter('Sátira', this)">Sátira</button></li>
+                </ul>
+              </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Ação')">Ação</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Terror')">Terror</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Comédia')">Comédia</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Drama')">Drama</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Aventura')">Aventura</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Infantil')">Infantil</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Fantasia')">Fantasia</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Animação')">Animação</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Romance')">Romance</button>
-            </div>
-            <div class="col-6 col-md-4 col-lg-2">
-              <button class="btn btn-outline-primary w-100" onclick="filterCards('Sátira')">Sátira</button>
+          
+            <!-- Buttons for Larger Screens -->
+            <div class="row g-2 d-none d-md-flex">
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('all')">Todos</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Ação')">Ação</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Terror')">Terror</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Comédia')">Comédia</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Drama')">Drama</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Aventura')">Aventura</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Infantil')">Infantil</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Fantasia')">Fantasia</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Animação')">Animação</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Romance')">Romance</button>
+              </div>
+              <div class="col-6 col-md-4 col-lg-2">
+                <button class="btn btn-outline-dark w-100" onclick="filterCards('Sátira')">Sátira</button>
+              </div>
             </div>
           </div>
-        </div>
+        
 
         <!--Filmes -->
         <div class="row justify-content-center">
@@ -282,19 +305,15 @@
         </div>
       </div>
     </main>
-
     <!-- Rodapé -->
     <footer class="bg-dark text-white py-3">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-md-3 text-center mb-2 nav-item">
-            <a href="#" class="link-opacity-50-hover nav-link active link-light fw-bold fs-5">Sobre nós</a>
+            <a href="../html/sobre-nos.html" class="link-opacity-50-hover nav-link active link-light fw-bold fs-5">Sobre nós</a>
           </div>
           <div class="col-12 col-md-3 text-center mb-2 nav-item">
             <a href="../html/feedback.html" class="link-opacity-50-hover nav-link active link-light fw-bold fs-5">Feedback</a>
-          </div>
-          <div class="col-12 col-md-3 text-center mb-2 nav-item">
-            <a href="#" class="link-opacity-50-hover nav-link active link-light fw-bold fs-5">Créditos</a>
           </div>
         </div>
         <hr class="my-3" style="border-color: white;">
@@ -304,9 +323,6 @@
       </div>
     </footer>
   </div>
-
-
-
 </body>
 
 </html>
