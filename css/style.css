@@ -19,13 +19,7 @@ body {
 #input-pesquisa{
     border-radius: 25px;
 }
-#btn-lupa {
-    transition: background-color 0.3s ease;
-  }
-  
-  #btn-lupa:hover {
-    background-color: #f0f0f0;
-  }
+
 #btn-lupa {
     transition: background-color 0.3s ease;
     font-size: 1.25rem; color: white;
